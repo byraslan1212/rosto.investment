@@ -1,631 +1,1514 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>افتح محل مجمدات ومتبلات — عائد من ٤٠٪ سنوياً</title>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0A0A0A">
-<link rel="icon" href="icon-192.png" type="image/png">
-<link rel="apple-touch-icon" href="icon-192.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="فرصة استثمارية">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-<style>
-:root {
-  --gold: #C9A83C;
-  --gold-l: #E8C85A;
-  --gold-d: #8A6F22;
-  --black: #0A0A0A;
-  --dark: #111111;
-  --dark2: #1A1A1A;
-  --white: #FFFFFF;
-  --off: #F5F1EA;
-  --gray: #888888;
-  --div: rgba(201,168,60,0.15);
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--black);color:var(--white);font-family:'Cairo',sans-serif;direction:rtl;overflow-x:hidden;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>افتح محل مجمدات ومتبلات — عائد من ٤٠٪ سنوياً</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="فرصة استثمارية">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cairo:wght@300;400;600;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A83C;
+      --gold-l: #E8C85A;
+      --gold-d: #8A6F22;
+      --black: #0A0A0A;
+      --dark: #111111;
+      --dark2: #1A1A1A;
+      --white: #FFFFFF;
+      --off: #F5F1EA;
+      --gray: #888888;
+      --div: rgba(201, 168, 60, 0.15);
+    }
 
-/* SCROLLBAR */
-::-webkit-scrollbar{width:4px;}
-::-webkit-scrollbar-track{background:var(--black);}
-::-webkit-scrollbar-thumb{background:var(--gold-d);border-radius:2px;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.8);}}
-@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-@keyframes glow{0%,100%{box-shadow:0 0 20px rgba(201,168,60,.2);}50%{box-shadow:0 0 40px rgba(201,168,60,.5);}}
-@keyframes countUp{from{opacity:0;}to{opacity:1;}}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
-.reveal.on{opacity:1;transform:translateY(0);}
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+      overflow-x: hidden;
+    }
 
-/* TICKER */
-.ticker{background:var(--gold);padding:.4rem 0;overflow:hidden;white-space:nowrap;}
-.ticker-inner{display:inline-flex;animation:ticker 18s linear infinite;}
-.ticker-inner span{padding:0 3rem;font-size:.75rem;font-weight:700;color:var(--black);letter-spacing:2px;text-transform:uppercase;}
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,168,60,.1);transition:all .3s;}
-.nav-badge{font-size:.7rem;letter-spacing:3px;color:var(--gold);font-weight:700;text-transform:uppercase;}
-.nav-cta{background:var(--gold);color:var(--black);padding:.5rem 1.4rem;font-size:.8rem;font-weight:700;font-family:'Cairo',sans-serif;border:none;cursor:pointer;border-radius:3px;text-decoration:none;transition:all .3s;}
-.nav-cta:hover{background:var(--gold-l);transform:translateY(-1px);}
+    ::-webkit-scrollbar-track {
+      background: var(--black);
+    }
 
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:7rem 2rem 4rem;}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 40%,rgba(201,168,60,.07) 0%,transparent 70%),linear-gradient(180deg,#0A0A0A 0%,#0D0B05 50%,#0A0A0A 100%);}
-.hero-inner{max-width:800px;margin:0 auto;text-align:center;position:relative;z-index:2;}
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold-d);
+      border-radius: 2px;
+    }
 
-.live-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(201,168,60,.08);border:1px solid rgba(201,168,60,.3);padding:.45rem 1.3rem;border-radius:100px;font-size:.72rem;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:2rem;animation:fadeUp .6s ease both;}
-.live-badge i{width:7px;height:7px;background:var(--gold);border-radius:50%;animation:pulse 2s infinite;}
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
 
-.hero-pre{font-size:.8rem;letter-spacing:4px;color:var(--gray);text-transform:uppercase;margin-bottom:1rem;animation:fadeUp .6s .1s ease both;}
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:1.2rem;animation:fadeUp .6s .15s ease both;}
-.hero-h1 em{font-style:normal;background:linear-gradient(135deg,var(--gold-l),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;}
+    @keyframes pulse {
 
-.hero-sub{font-size:clamp(.95rem,2.2vw,1.2rem);color:rgba(255,255,255,.55);line-height:1.9;font-weight:300;margin-bottom:2.5rem;animation:fadeUp .6s .2s ease both;max-width:580px;margin-left:auto;margin-right:auto;}
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
 
-/* COMPARE BOX */
-.compare-strip{display:flex;justify-content:center;gap:1px;background:rgba(201,168,60,.15);border:1px solid rgba(201,168,60,.2);margin-bottom:2.5rem;animation:fadeUp .6s .25s ease both;}
-.cmp{background:var(--dark2);padding:1.2rem 2rem;text-align:center;flex:1;max-width:200px;}
-.cmp-val{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;display:block;margin-bottom:.2rem;}
-.cmp-key{font-size:.72rem;color:var(--gray);letter-spacing:1px;}
-.cmp.highlight{background:rgba(201,168,60,.08);}
-.cmp.highlight .cmp-val{background:linear-gradient(135deg,var(--gold-l),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+      50% {
+        opacity: .5;
+        transform: scale(.8);
+      }
+    }
 
-.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp .6s .3s ease both;}
-.btn-p{background:linear-gradient(135deg,var(--gold-l),var(--gold));color:var(--black);border:none;padding:1rem 2.5rem;font-size:1rem;font-weight:700;font-family:'Cairo',sans-serif;border-radius:4px;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;animation:glow 3s ease infinite;}
-.btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,168,60,.4);}
-.btn-g{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.2);padding:1rem 2.5rem;font-size:1rem;font-weight:400;font-family:'Cairo',sans-serif;border-radius:4px;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;}
-.btn-g:hover{border-color:var(--gold);color:var(--gold);}
+    @keyframes ticker {
+      0% {
+        transform: translateX(0);
+      }
 
-/* SECTIONS */
-section{padding:5rem 2rem;}
-.si{max-width:1100px;margin:0 auto;}
-.stag{font-size:.7rem;letter-spacing:4px;color:var(--gold);font-weight:700;text-transform:uppercase;display:block;margin-bottom:.8rem;}
-.sh2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:700;line-height:1.25;margin-bottom:1.2rem;}
-.gline{width:50px;height:3px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:2rem;}
+      100% {
+        transform: translateX(-50%);
+      }
+    }
 
-/* WHY SECTION */
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,60,.1);border:1px solid rgba(201,168,60,.12);margin-top:2.5rem;}
-.why-item{background:var(--dark2);padding:2rem;}
-.why-item:hover{background:rgba(201,168,60,.04);}
-.why-icon{font-size:2rem;margin-bottom:.8rem;display:block;}
-.why-title{font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:.4rem;}
-.why-desc{font-size:.88rem;color:var(--gray);line-height:1.8;}
-@media(max-width:600px){.why-grid{grid-template-columns:1fr;}}
+    @keyframes glow {
 
-/* WHAT YOU GET */
-.get-list{display:flex;flex-direction:column;gap:.6rem;margin-top:2rem;}
-.get-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.5rem;background:var(--dark2);border:1px solid rgba(255,255,255,.05);transition:all .3s;}
-.get-item:hover{border-color:rgba(201,168,60,.3);background:rgba(201,168,60,.03);}
-.get-dot{width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;}
-.get-text{font-size:.95rem;color:rgba(255,255,255,.8);}
-.get-text strong{color:var(--white);}
+      0%,
+      100% {
+        box-shadow: 0 0 20px rgba(201, 168, 60, .2);
+      }
 
-/* RETURNS */
-.returns-section{background:var(--dark);}
-.return-big{text-align:center;padding:3rem;background:linear-gradient(135deg,rgba(201,168,60,.08),rgba(201,168,60,.02));border:1px solid rgba(201,168,60,.2);margin:2rem 0;position:relative;overflow:hidden;}
-.return-big::before{content:'٪';font-family:'Playfair Display',serif;font-size:20rem;font-weight:900;color:rgba(201,168,60,.03);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);line-height:1;pointer-events:none;}
-.return-num{font-family:'Playfair Display',serif;font-size:clamp(4rem,10vw,8rem);font-weight:900;background:linear-gradient(135deg,var(--gold-l),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1;position:relative;z-index:2;}
-.return-label{font-size:1.1rem;color:rgba(255,255,255,.6);margin-top:.5rem;position:relative;z-index:2;}
-.return-note{font-size:.85rem;color:var(--gold);margin-top:.8rem;font-weight:600;position:relative;z-index:2;}
+      50% {
+        box-shadow: 0 0 40px rgba(201, 168, 60, .5);
+      }
+    }
 
-.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,168,60,.1);margin-top:2rem;}
-.tl-item{background:var(--dark2);padding:1.5rem;text-align:center;}
-.tl-item:first-child{background:rgba(201,168,60,.08);}
-.tl-q{font-size:.7rem;letter-spacing:2px;color:var(--gray);font-weight:700;text-transform:uppercase;display:block;margin-bottom:.5rem;}
-.tl-val{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--gold);display:block;}
-.tl-label{font-size:.75rem;color:var(--gray);margin-top:.3rem;}
-@media(max-width:600px){.timeline{grid-template-columns:repeat(2,1fr);}}
+    @keyframes countUp {
+      from {
+        opacity: 0;
+      }
 
-/* VS BANK */
-.vs-section{background:var(--dark2);}
-.vs-table{width:100%;border-collapse:collapse;margin-top:2rem;}
-.vs-table th{padding:1rem 1.5rem;font-size:.8rem;color:var(--gray);letter-spacing:2px;font-weight:600;text-transform:uppercase;border-bottom:2px solid rgba(201,168,60,.2);text-align:center;}
-.vs-table th:first-child{text-align:right;}
-.vs-table td{padding:.9rem 1.5rem;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.04);text-align:center;}
-.vs-table td:first-child{text-align:right;color:var(--gray);font-size:.9rem;}
-.vs-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}
-.vs-ours{color:var(--gold);font-weight:700;}
-.vs-bank{color:var(--gray);}
-.vs-check{color:#4CAF50;}
-.vs-x{color:#e53935;}
+      to {
+        opacity: 1;
+      }
+    }
 
-/* STRUCTURE */
-.structure-section{}
-.struct-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem;}
-@media(max-width:700px){.struct-grid{grid-template-columns:1fr;}}
-.struct-card{background:var(--dark2);border:1px solid rgba(201,168,60,.12);padding:2rem;}
-.struct-card-title{font-size:1rem;font-weight:700;color:var(--gold);margin-bottom:1rem;padding-bottom:.8rem;border-bottom:1px solid rgba(201,168,60,.15);}
-.struct-row{display:flex;justify-content:space-between;align-items:center;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:.88rem;}
-.struct-row:last-child{border-bottom:none;}
-.struct-key{color:var(--gray);}
-.struct-val{color:var(--white);font-weight:600;text-align:left;}
-.struct-val.gold{color:var(--gold);}
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
 
-/* FORM */
-.form-section{background:linear-gradient(180deg,var(--black) 0%,#0D0B05 100%);}
-.form-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start;}
-@media(max-width:800px){.form-wrap{grid-template-columns:1fr;gap:2.5rem;}}
+    .reveal.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-.form-left h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;line-height:1.3;margin-bottom:1.2rem;}
-.form-left h2 span{color:var(--gold);display:block;}
-.form-left p{color:rgba(255,255,255,.5);font-size:.9rem;line-height:1.9;font-weight:300;}
+    /* TICKER */
+    .ticker {
+      background: var(--gold);
+      padding: .4rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
 
-.checklist{margin-top:1.5rem;display:flex;flex-direction:column;gap:.6rem;}
-.cl-item{display:flex;align-items:flex-start;gap:.8rem;font-size:.88rem;color:rgba(255,255,255,.65);}
-.cl-dot{width:18px;height:18px;background:rgba(201,168,60,.15);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem;font-size:.6rem;color:var(--gold);}
+    .ticker-inner {
+      display: inline-flex;
+      animation: ticker 18s linear infinite;
+    }
 
-.urgency{margin-top:1.8rem;padding:1rem 1.2rem;background:rgba(201,168,60,.05);border-right:3px solid var(--gold);font-size:.82rem;color:var(--gold);line-height:1.8;}
+    .ticker-inner span {
+      padding: 0 3rem;
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
 
-.form-box{background:var(--dark2);border:1px solid rgba(201,168,60,.15);padding:2.2rem;position:relative;}
-.form-box::before{content:'';position:absolute;top:0;right:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-l),var(--gold));}
-.form-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:.3rem;}
-.form-sub{font-size:.8rem;color:var(--gray);margin-bottom:1.8rem;}
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 900;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 10, 10, .85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(201, 168, 60, .1);
+      transition: all .3s;
+    }
 
-.fg{margin-bottom:1.1rem;}
-.fg label{display:block;font-size:.75rem;color:var(--gray);margin-bottom:.45rem;letter-spacing:1px;font-weight:600;text-transform:uppercase;}
-.fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:var(--white);padding:.85rem 1rem;font-family:'Cairo',sans-serif;font-size:.92rem;border-radius:3px;transition:all .3s;outline:none;direction:rtl;}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);background:rgba(201,168,60,.04);box-shadow:0 0 0 3px rgba(201,168,60,.07);}
-.fg select option{background:var(--dark2);color:var(--white);}
-.fg textarea{height:75px;resize:none;}
-.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;}
-@media(max-width:420px){.fg-row{grid-template-columns:1fr;}}
+    .nav-badge {
+      font-size: .7rem;
+      letter-spacing: 3px;
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
 
-.sub-btn{width:100%;background:linear-gradient(135deg,var(--gold-l),var(--gold));color:var(--black);border:none;padding:1.1rem;font-size:1rem;font-weight:700;font-family:'Cairo',sans-serif;border-radius:3px;cursor:pointer;transition:all .3s;margin-top:.4rem;letter-spacing:.5px;}
-.sub-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,168,60,.4);}
-.sub-btn.loading{opacity:.7;cursor:not-allowed;transform:none;}
-.privacy{text-align:center;font-size:.72rem;color:rgba(255,255,255,.25);margin-top:.9rem;line-height:1.6;}
+    .nav-cta {
+      background: var(--gold);
+      color: var(--black);
+      padding: .5rem 1.4rem;
+      font-size: .8rem;
+      font-weight: 700;
+      font-family: 'Cairo', sans-serif;
+      border: none;
+      cursor: pointer;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: all .3s;
+    }
 
-.success{display:none;text-align:center;padding:2.5rem 1.5rem;}
-.success.show{display:block;}
-.s-icon{font-size:3.5rem;margin-bottom:1rem;display:block;}
-.success h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold);margin-bottom:.7rem;}
-.success p{color:var(--gray);font-size:.9rem;line-height:1.9;}
+    .nav-cta:hover {
+      background: var(--gold-l);
+      transform: translateY(-1px);
+    }
 
-/* FLOATING */
-.fab{position:fixed;bottom:1.8rem;left:50%;transform:translateX(-50%) translateY(80px);background:linear-gradient(135deg,var(--gold-l),var(--gold));color:var(--black);padding:.85rem 2.2rem;font-weight:700;font-family:'Cairo',sans-serif;font-size:.9rem;border-radius:100px;cursor:pointer;box-shadow:0 8px 32px rgba(201,168,60,.4);z-index:999;transition:all .4s cubic-bezier(.34,1.56,.64,1);border:none;white-space:nowrap;text-decoration:none;}
-.fab.show{transform:translateX(-50%) translateY(0);}
-.fab:hover{box-shadow:0 12px 48px rgba(201,168,60,.6);transform:translateX(-50%) translateY(-2px);}
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 7rem 2rem 4rem;
+    }
 
-footer{background:var(--dark);border-top:1px solid rgba(201,168,60,.1);padding:1.8rem;text-align:center;}
-footer p{font-size:.75rem;color:rgba(255,255,255,.2);letter-spacing:2px;}
-.fg{color:var(--gold);font-size:.68rem;letter-spacing:4px;font-weight:700;display:block;margin-bottom:.4rem;}
-</style>
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js');
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(201, 168, 60, .07) 0%, transparent 70%), linear-gradient(180deg, #0A0A0A 0%, #0D0B05 50%, #0A0A0A 100%);
+    }
+
+    .hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: rgba(201, 168, 60, .08);
+      border: 1px solid rgba(201, 168, 60, .3);
+      padding: .45rem 1.3rem;
+      border-radius: 100px;
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      animation: fadeUp .6s ease both;
+    }
+
+    .live-badge i {
+      width: 7px;
+      height: 7px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .hero-pre {
+      font-size: .8rem;
+      letter-spacing: 4px;
+      color: var(--gray);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      animation: fadeUp .6s .1s ease both;
+    }
+
+    .hero-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 6vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+      animation: fadeUp .6s .15s ease both;
+    }
+
+    .hero-h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--gold-l), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+    }
+
+    .hero-sub {
+      font-size: clamp(.95rem, 2.2vw, 1.2rem);
+      color: rgba(255, 255, 255, .55);
+      line-height: 1.9;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      animation: fadeUp .6s .2s ease both;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* COMPARE BOX */
+    .compare-strip {
+      display: flex;
+      justify-content: center;
+      gap: 1px;
+      background: rgba(201, 168, 60, .15);
+      border: 1px solid rgba(201, 168, 60, .2);
+      margin-bottom: 2.5rem;
+      animation: fadeUp .6s .25s ease both;
+    }
+
+    .cmp {
+      background: var(--dark2);
+      padding: 1.2rem 2rem;
+      text-align: center;
+      flex: 1;
+      max-width: 200px;
+    }
+
+    .cmp-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: .2rem;
+    }
+
+    .cmp-key {
+      font-size: .72rem;
+      color: var(--gray);
+      letter-spacing: 1px;
+    }
+
+    .cmp.highlight {
+      background: rgba(201, 168, 60, .08);
+    }
+
+    .cmp.highlight .cmp-val {
+      background: linear-gradient(135deg, var(--gold-l), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp .6s .3s ease both;
+    }
+
+    .btn-p {
+      background: linear-gradient(135deg, var(--gold-l), var(--gold));
+      color: var(--black);
+      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: 'Cairo', sans-serif;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all .3s;
+      text-decoration: none;
+      display: inline-block;
+      animation: glow 3s ease infinite;
+    }
+
+    .btn-p:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(201, 168, 60, .4);
+    }
+
+    .btn-g {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, .2);
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: 'Cairo', sans-serif;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all .3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-g:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .si {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .stag {
+      font-size: .7rem;
+      letter-spacing: 4px;
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: .8rem;
+    }
+
+    .sh2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 1.2rem;
+    }
+
+    .gline {
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin-bottom: 2rem;
+    }
+
+    /* WHY SECTION */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(201, 168, 60, .1);
+      border: 1px solid rgba(201, 168, 60, .12);
+      margin-top: 2.5rem;
+    }
+
+    .why-item {
+      background: var(--dark2);
+      padding: 2rem;
+    }
+
+    .why-item:hover {
+      background: rgba(201, 168, 60, .04);
+    }
+
+    .why-icon {
+      font-size: 2rem;
+      margin-bottom: .8rem;
+      display: block;
+    }
+
+    .why-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: .4rem;
+    }
+
+    .why-desc {
+      font-size: .88rem;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+
+    @media(max-width:600px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* WHAT YOU GET */
+    .get-list {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      margin-top: 2rem;
+    }
+
+    .get-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      background: var(--dark2);
+      border: 1px solid rgba(255, 255, 255, .05);
+      transition: all .3s;
+    }
+
+    .get-item:hover {
+      border-color: rgba(201, 168, 60, .3);
+      background: rgba(201, 168, 60, .03);
+    }
+
+    .get-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .get-text {
+      font-size: .95rem;
+      color: rgba(255, 255, 255, .8);
+    }
+
+    .get-text strong {
+      color: var(--white);
+    }
+
+    /* RETURNS */
+    .returns-section {
+      background: var(--dark);
+    }
+
+    .return-big {
+      text-align: center;
+      padding: 3rem;
+      background: linear-gradient(135deg, rgba(201, 168, 60, .08), rgba(201, 168, 60, .02));
+      border: 1px solid rgba(201, 168, 60, .2);
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .return-big::before {
+      content: '٪';
+      font-family: 'Playfair Display', serif;
+      font-size: 20rem;
+      font-weight: 900;
+      color: rgba(201, 168, 60, .03);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .return-num {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(4rem, 10vw, 8rem);
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--gold-l), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      line-height: 1;
+      position: relative;
+      z-index: 2;
+    }
+
+    .return-label {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, .6);
+      margin-top: .5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .return-note {
+      font-size: .85rem;
+      color: var(--gold);
+      margin-top: .8rem;
+      font-weight: 600;
+      position: relative;
+      z-index: 2;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(201, 168, 60, .1);
+      margin-top: 2rem;
+    }
+
+    .tl-item {
+      background: var(--dark2);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .tl-item:first-child {
+      background: rgba(201, 168, 60, .08);
+    }
+
+    .tl-q {
+      font-size: .7rem;
+      letter-spacing: 2px;
+      color: var(--gray);
+      font-weight: 700;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: .5rem;
+    }
+
+    .tl-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
+    }
+
+    .tl-label {
+      font-size: .75rem;
+      color: var(--gray);
+      margin-top: .3rem;
+    }
+
+    @media(max-width:600px) {
+      .timeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* VS BANK */
+    .vs-section {
+      background: var(--dark2);
+    }
+
+    .vs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+
+    .vs-table th {
+      padding: 1rem 1.5rem;
+      font-size: .8rem;
+      color: var(--gray);
+      letter-spacing: 2px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-bottom: 2px solid rgba(201, 168, 60, .2);
+      text-align: center;
+    }
+
+    .vs-table th:first-child {
+      text-align: right;
+    }
+
+    .vs-table td {
+      padding: .9rem 1.5rem;
+      font-size: .95rem;
+      border-bottom: 1px solid rgba(255, 255, 255, .04);
+      text-align: center;
+    }
+
+    .vs-table td:first-child {
+      text-align: right;
+      color: var(--gray);
+      font-size: .9rem;
+    }
+
+    .vs-table tr:nth-child(even) td {
+      background: rgba(255, 255, 255, .02);
+    }
+
+    .vs-ours {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .vs-bank {
+      color: var(--gray);
+    }
+
+    .vs-check {
+      color: #4CAF50;
+    }
+
+    .vs-x {
+      color: #e53935;
+    }
+
+    /* STRUCTURE */
+    .structure-section {}
+
+    .struct-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    @media(max-width:700px) {
+      .struct-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .struct-card {
+      background: var(--dark2);
+      border: 1px solid rgba(201, 168, 60, .12);
+      padding: 2rem;
+    }
+
+    .struct-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      padding-bottom: .8rem;
+      border-bottom: 1px solid rgba(201, 168, 60, .15);
+    }
+
+    .struct-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .55rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .04);
+      font-size: .88rem;
+    }
+
+    .struct-row:last-child {
+      border-bottom: none;
+    }
+
+    .struct-key {
+      color: var(--gray);
+    }
+
+    .struct-val {
+      color: var(--white);
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .struct-val.gold {
+      color: var(--gold);
+    }
+
+    /* FORM */
+    .form-section {
+      background: linear-gradient(180deg, var(--black) 0%, #0D0B05 100%);
+    }
+
+    .form-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    @media(max-width:800px) {
+      .form-wrap {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    .form-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 1.2rem;
+    }
+
+    .form-left h2 span {
+      color: var(--gold);
+      display: block;
+    }
+
+    .form-left p {
+      color: rgba(255, 255, 255, .5);
+      font-size: .9rem;
+      line-height: 1.9;
+      font-weight: 300;
+    }
+
+    .checklist {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+
+    .cl-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .8rem;
+      font-size: .88rem;
+      color: rgba(255, 255, 255, .65);
+    }
+
+    .cl-dot {
+      width: 18px;
+      height: 18px;
+      background: rgba(201, 168, 60, .15);
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: .1rem;
+      font-size: .6rem;
+      color: var(--gold);
+    }
+
+    .urgency {
+      margin-top: 1.8rem;
+      padding: 1rem 1.2rem;
+      background: rgba(201, 168, 60, .05);
+      border-right: 3px solid var(--gold);
+      font-size: .82rem;
+      color: var(--gold);
+      line-height: 1.8;
+    }
+
+    .form-box {
+      background: var(--dark2);
+      border: 1px solid rgba(201, 168, 60, .15);
+      padding: 2.2rem;
+      position: relative;
+    }
+
+    .form-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-l), var(--gold));
+    }
+
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: .3rem;
+    }
+
+    .form-sub {
+      font-size: .8rem;
+      color: var(--gray);
+      margin-bottom: 1.8rem;
+    }
+
+    .fg {
+      margin-bottom: 1.1rem;
+    }
+
+    .fg label {
+      display: block;
+      font-size: .75rem;
+      color: var(--gray);
+      margin-bottom: .45rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .fg input,
+    .fg select,
+    .fg textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid rgba(255, 255, 255, .08);
+      color: var(--white);
+      padding: .85rem 1rem;
+      font-family: 'Cairo', sans-serif;
+      font-size: .92rem;
+      border-radius: 3px;
+      transition: all .3s;
+      outline: none;
+      direction: rtl;
+    }
+
+    .fg input:focus,
+    .fg select:focus,
+    .fg textarea:focus {
+      border-color: var(--gold);
+      background: rgba(201, 168, 60, .04);
+      box-shadow: 0 0 0 3px rgba(201, 168, 60, .07);
+    }
+
+    .fg select option {
+      background: var(--dark2);
+      color: var(--white);
+    }
+
+    .fg textarea {
+      height: 75px;
+      resize: none;
+    }
+
+    .fg-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .9rem;
+    }
+
+    @media(max-width:420px) {
+      .fg-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .sub-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--gold-l), var(--gold));
+      color: var(--black);
+      border: none;
+      padding: 1.1rem;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: 'Cairo', sans-serif;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all .3s;
+      margin-top: .4rem;
+      letter-spacing: .5px;
+    }
+
+    .sub-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(201, 168, 60, .4);
+    }
+
+    .sub-btn.loading {
+      opacity: .7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .privacy {
+      text-align: center;
+      font-size: .72rem;
+      color: rgba(255, 255, 255, .25);
+      margin-top: .9rem;
+      line-height: 1.6;
+    }
+
+    .success {
+      display: none;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .success.show {
+      display: block;
+    }
+
+    .s-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .success h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: .7rem;
+    }
+
+    .success p {
+      color: var(--gray);
+      font-size: .9rem;
+      line-height: 1.9;
+    }
+
+    /* FLOATING */
+    .fab {
+      position: fixed;
+      bottom: 1.8rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: linear-gradient(135deg, var(--gold-l), var(--gold));
+      color: var(--black);
+      padding: .85rem 2.2rem;
+      font-weight: 700;
+      font-family: 'Cairo', sans-serif;
+      font-size: .9rem;
+      border-radius: 100px;
+      cursor: pointer;
+      box-shadow: 0 8px 32px rgba(201, 168, 60, .4);
+      z-index: 999;
+      transition: all .4s cubic-bezier(.34, 1.56, .64, 1);
+      border: none;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .fab.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .fab:hover {
+      box-shadow: 0 12px 48px rgba(201, 168, 60, .6);
+      transform: translateX(-50%) translateY(-2px);
+    }
+
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(201, 168, 60, .1);
+      padding: 1.8rem;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .2);
+      letter-spacing: 2px;
+    }
+
+    .fg {
+      color: var(--gold);
+      font-size: .68rem;
+      letter-spacing: 4px;
+      font-weight: 700;
+      display: block;
+      margin-bottom: .4rem;
+    }
+  </style>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
+  <script>
+    // ===== Hide the "سجّل الآن" form section until a CTA button is clicked =====
+    document.addEventListener('DOMContentLoaded', function () {
+      var applySection = document.getElementById('apply');
+      if (!applySection) return;
+
+      function hideForm() {
+        applySection.style.display = 'none';
+      }
+
+      function showForm() {
+        applySection.style.display = '';
+        applySection.scrollIntoView({behavior: 'smooth', block: 'start'});
+      }
+
+      // Hide by default, unless the page was opened with #apply already in the URL
+      if (location.hash === '#apply') {
+        showForm();
+      } else {
+        hideForm();
+      }
+
+      // Any link pointing to #apply (nav button, hero CTA, floating button) reveals the form instead of jumping
+      document.querySelectorAll('a[href="#apply"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          showForm();
+          history.replaceState(null, '', '#apply');
+        });
+      });
     });
-  }
-</script>
+  </script>
 </head>
+
 <body>
 
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-inner">
-    <span>عائد سنوي يبدأ من ٤٠٪</span>
-    <span>•</span>
-    <span>استثمار يبدأ من ٣٠٠,٠٠٠ جنيه</span>
-    <span>•</span>
-    <span>توزيع أرباح ربع سنوي</span>
-    <span>•</span>
-    <span>الشركة تتحمل الإيجار والمرتبات</span>
-    <span>•</span>
-    <span>عائد سنوي يبدأ من ٤٠٪</span>
-    <span>•</span>
-    <span>استثمار يبدأ من ٣٠٠,٠٠٠ جنيه</span>
-    <span>•</span>
-    <span>توزيع أرباح ربع سنوي</span>
-    <span>•</span>
-    <span>الشركة تتحمل الإيجار والمرتبات</span>
-    <span>•</span>
-  </div>
-</div>
-
-<!-- NAV -->
-<nav>
-  <span class="nav-badge">افتح محلك الآن</span>
-  <a href="#apply" class="nav-cta">سجّل الآن</a>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-inner">
-    <div class="live-badge"><i></i> فرصة محدودة — أماكن متاحة الآن</div>
-    <p class="hero-pre">افتح محل مجمدات ومتبلات فراخ ولحوم</p>
-    <h1 class="hero-h1">
-      بـ ٣٠٠,٠٠٠ جنيه
-      <em>محلك جاهز وعائدك من ٤٠٪ سنوياً</em>
-    </h1>
-    <p class="hero-sub">
-      بتفتح محل مجمدات ومتبلات تحت منظومة شغّالة — بضاعة، تسويق، توصيل، وإدارة كاملة.
-      أنت صاحب المحل. الشركة بتشغّله. وأنت بتاخد الأرباح كل ٣ أشهر.
-    </p>
-
-    <div class="compare-strip">
-      <div class="cmp">
-        <span class="cmp-val" style="color:var(--gray);">٢٧٪</span>
-        <span class="cmp-key">شهادات البنك</span>
-      </div>
-      <div class="cmp">
-        <span class="cmp-val" style="color:var(--gray);">٢٠–٢٥٪</span>
-        <span class="cmp-key">البورصة (متقلبة)</span>
-      </div>
-      <div class="cmp highlight">
-        <span class="cmp-val">٤٠٪+</span>
-        <span class="cmp-key" style="color:var(--gold);">فرصتنا — حد أدنى</span>
-      </div>
-    </div>
-
-    <div class="hero-btns">
-      <a href="#apply" class="btn-p">أريد فتح محلي</a>
-      <a href="#returns" class="btn-g">كيف يعمل العائد؟</a>
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span>عائد سنوي يبدأ من ٤٠٪</span>
+      <span>•</span>
+      <span>استثمار يبدأ من ٣٠٠,٠٠٠ جنيه</span>
+      <span>•</span>
+      <span>توزيع أرباح ربع سنوي</span>
+      <span>•</span>
+      <span>الشركة تتحمل الإيجار والمرتبات</span>
+      <span>•</span>
+      <span>عائد سنوي يبدأ من ٤٠٪</span>
+      <span>•</span>
+      <span>استثمار يبدأ من ٣٠٠,٠٠٠ جنيه</span>
+      <span>•</span>
+      <span>توزيع أرباح ربع سنوي</span>
+      <span>•</span>
+      <span>الشركة تتحمل الإيجار والمرتبات</span>
+      <span>•</span>
     </div>
   </div>
-</section>
 
-<!-- WHY -->
-<section style="background:var(--dark2);padding:5rem 2rem;">
-  <div class="si">
-    <div class="reveal">
-      <span class="stag">ليه هذه الفرصة مختلفة</span>
-      <h2 class="sh2">محل خاص بك — بدون تعقيدات المطعم أو الكافيه</h2>
-      <div class="gline"></div>
-    </div>
-    <div class="why-grid reveal">
-      <div class="why-item">
-        <span class="why-icon">🏭</span>
-        <div class="why-title">منتج غذائي — مش خدمة</div>
-        <div class="why-desc">المطاعم بتفشل لأن الجودة بتتذبذب والشيف بيمشي. هنا المنتج معياري ومتحكم فيه ١٠٠٪ — نفس الجودة كل يوم بدون استثناء.</div>
-      </div>
-      <div class="why-item">
-        <span class="why-icon">🔒</span>
-        <div class="why-title">الشركة تتحمل الإيجار والمرتبات</div>
-        <div class="why-desc">مفيش تكاليف ثابتة عليك. الإيجار والمرتبات من طرف الشركة — أنت صاحب المحل وبتاخد الأرباح.</div>
-      </div>
-      <div class="why-item">
-        <span class="why-icon">📦</span>
-        <div class="why-title">مجمدات = shelf life طويل</div>
-        <div class="why-desc">مفيش waste يومي. مفيش ضغط التخلص من البضاعة. المنتج المجمد بيعطي هامش أمان تشغيلي أعلى بكتير من الطازج.</div>
-      </div>
-      <div class="why-item">
-        <span class="why-icon">🤝</span>
-        <div class="why-title">صاحب محل — مش مدير</div>
-        <div class="why-desc">الشركة عندها فريق كامل — تسويق، مبيعات، توصيل، تغليف، إدارة مالية. دورك: تستثمر وتاخد أرباحك. مش أكتر.</div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- NAV -->
+  <nav>
+    <span class="nav-badge">افتح محلك الآن</span>
+    <a href="#apply" class="nav-cta">سجّل الآن</a>
+  </nav>
 
-<!-- WHAT YOU GET -->
-<section style="background:var(--black);">
-  <div class="si">
-    <div class="reveal">
-      <span class="stag">ماذا يشمل المشروع</span>
-      <h2 class="sh2">بـ ٣٠٠,٠٠٠ جنيه بتفتح محل جاهز بالكامل</h2>
-      <div class="gline"></div>
-    </div>
-    <div class="get-list reveal">
-      <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>بضاعة مجمدات عالية الجودة</strong> — من شركة ذات سمعة وطلب مسبق من السوق</span></div>
-      <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>برنامج مبيعات متطور</strong> — تتبع كامل للمخزون والمبيعات والأرباح</span></div>
-      <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>منظومة توصيل جاهزة</strong> — التوصيل للعميل من اليوم الأول</span></div>
-      <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>تعبئة وتغليف احترافي</strong> — علامة تجارية معروفة وتغليف متميز</span></div>
-      <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>إدارة تسويق كاملة</strong> — إعلانات، سوشيال ميديا، مجتمع عملاء نشط</span></div>
-      <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>إدارة مالية وتقارير ربع سنوية</strong> — شفافية كاملة في الأرقام</span></div>
-      <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>إدارة تشغيلية كاملة</strong> — فريق متخصص، SOPs موثقة، نظام ERP متكامل</span></div>
-      <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>٠.٢٥٪ في الشركة الأم</strong> — حصة حقيقية في الشركة ككل، مش بس في الوحدة</span></div>
-      <div class="get-item" style="border-color:rgba(201,168,60,.3);background:rgba(201,168,60,.03);"><span class="get-dot"></span><span class="get-text"><strong>اختياري:</strong> ممكن تشتغل كاشير في الفرع بمرتب ثابت — بالإضافة للأرباح</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- RETURNS -->
-<section class="returns-section" id="returns">
-  <div class="si">
-    <div class="reveal">
-      <span class="stag">العائد المالي</span>
-      <h2 class="sh2">كيف يعمل عائدك؟</h2>
-      <div class="gline"></div>
-    </div>
-
-    <div class="return-big reveal">
-      <span class="return-num">٤٠٪+</span>
-      <div class="return-label">عائد سنوي على مشروعك</div>
-      <div class="return-note">حد أدنى مضمون — وممكن يزيد مع نمو الأداء</div>
-    </div>
-
-    <div class="timeline reveal">
-      <div class="tl-item">
-        <span class="tl-q">كل ٣ أشهر</span>
-        <span class="tl-val">٣٠,٠٠٠+</span>
-        <div class="tl-label">توزيع ربع سنوي (ج)</div>
-      </div>
-      <div class="tl-item">
-        <span class="tl-q">كل سنة</span>
-        <span class="tl-val">١٢٠,٠٠٠+</span>
-        <div class="tl-label">عائد سنوي (ج)</div>
-      </div>
-      <div class="tl-item">
-        <span class="tl-q">بعد سنتين</span>
-        <span class="tl-val">٢٤٠,٠٠٠+</span>
-        <div class="tl-label">إجمالي عائد محتمل (ج)</div>
-      </div>
-      <div class="tl-item">
-        <span class="tl-q">بونص</span>
-        <span class="tl-val">٠.٢٥٪</span>
-        <div class="tl-label">حصة في الشركة الأم</div>
-      </div>
-    </div>
-
-    <div class="reveal" style="margin-top:1.5rem;padding:1.2rem 1.8rem;background:rgba(201,168,60,.05);border-right:3px solid var(--gold);font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.9;">
-      <strong style="color:var(--gold);">ملاحظة:</strong>
-      الـ ٤٠٪ هو الحد الأدنى المضمون — بمعنى إن في أسوأ سيناريو بتاخد ١٢٠,٠٠٠ جنيه سنوياً على الـ ٣٠٠,٠٠٠ اللي دفعتها.
-      لو الأداء أحسن من المتوقع — نسبتك من الأرباح بتزيد.
-    </div>
-  </div>
-</section>
-
-<!-- VS BANK -->
-<section class="vs-section">
-  <div class="si">
-    <div class="reveal">
-      <span class="stag">مقارنة</span>
-      <h2 class="sh2">ليه مش مشروع مع صاحبك؟</h2>
-      <div class="gline"></div>
-      <p style="color:var(--gray);font-size:.95rem;line-height:1.9;max-width:600px;margin-bottom:2rem;">
-        كتير ناس بتفكر تعمل مشروع مع صحاب — مطعم، محل، تجارة. الفكرة حلوة على الورق. بس الواقع بيقول حاجة تانية.
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="live-badge"><i></i> فرصة محدودة — أماكن متاحة الآن</div>
+      <p class="hero-pre">افتح محل مجمدات ومتبلات فراخ ولحوم</p>
+      <h1 class="hero-h1">
+        بـ ٣٠٠,٠٠٠ جنيه
+        <em>محلك جاهز وعائدك من ٤٠٪ سنوياً</em>
+      </h1>
+      <p class="hero-sub">
+        بتفتح محل مجمدات ومتبلات تحت منظومة شغّالة — بضاعة، تسويق، توصيل، وإدارة كاملة.
+        أنت صاحب المحل. الشركة بتشغّله. وأنت بتاخد الأرباح كل ٣ أشهر.
       </p>
-    </div>
-    <div style="overflow-x:auto;" class="reveal">
-      <table class="vs-table">
-        <thead>
-          <tr>
-            <th>المعيار</th>
-            <th style="color:var(--gray);">مشروع مع صاحب</th>
-            <th style="color:var(--gray);">شهادة بنك</th>
-            <th style="color:var(--gold);">فرصتنا ✦</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>العائد السنوي</td>
-            <td class="vs-bank">مجهول — ممكن خسارة</td>
-            <td class="vs-bank">~٢٧٪ فيكس</td>
-            <td class="vs-ours">٤٠٪+ حد أدنى مضمون</td>
-          </tr>
-          <tr>
-            <td>من بيدير المشروع؟</td>
-            <td class="vs-bank">أنت + صاحبك + خلافات</td>
-            <td class="vs-check">البنك</td>
-            <td class="vs-ours">فريق متخصص — أنت مش محتاج حاجة</td>
-          </tr>
-          <tr>
-            <td>الإيجار والمرتبات</td>
-            <td class="vs-x">عليك أنت</td>
-            <td class="vs-check">لا يوجد</td>
-            <td class="vs-ours" style="color:#4CAF50;">على الشركة</td>
-          </tr>
-          <tr>
-            <td>الخلاف مع الشركاء</td>
-            <td class="vs-x">وارد جداً ويدمر المشروع</td>
-            <td class="vs-check">لا يوجد</td>
-            <td class="vs-ours" style="color:#4CAF50;">لا يوجد — عقد واضح</td>
-          </tr>
-          <tr>
-            <td>ضمان الاسترداد</td>
-            <td class="vs-x">مفيش ضمان</td>
-            <td class="vs-check">مضمون</td>
-            <td class="vs-ours">عائد مضمون حد أدنى</td>
-          </tr>
-          <tr>
-            <td>وقتك ومجهودك اليومي</td>
-            <td class="vs-x">مطلوب منك كل يوم</td>
-            <td class="vs-check">صفر</td>
-            <td class="vs-ours" style="color:#4CAF50;">صفر — تسليم مفتاح</td>
-          </tr>
-          <tr>
-            <td>حصة في أصل حقيقي</td>
-            <td class="vs-bank">ممكن — لو المشروع نجح</td>
-            <td class="vs-x">لا</td>
-            <td class="vs-ours">٠.٢٥٪ في الشركة الأم</td>
-          </tr>
-          <tr>
-            <td>إمكانية زيادة العائد</td>
-            <td class="vs-bank">ممكن — لو الحظ ساعد</td>
-            <td class="vs-x">لا — فيكس</td>
-            <td class="vs-ours">✓ لو الأداء زاد</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="reveal" style="margin-top:1.2rem;padding:1.2rem 1.8rem;background:rgba(201,168,60,.05);border-right:3px solid var(--gold);font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.9;">
-      المشكلة مش في الصاحب — المشكلة إن معظم الناس بتدخل مشاريع من غير منظومة واضحة.
-      هنا المنظومة جاهزة وشغّالة — أنت بتدخل على شيء قائم ومثبت.
-    </div>
-  </div>
-</section>
 
-<!-- STRUCTURE -->
-<section class="structure-section" style="background:var(--black);">
-  <div class="si">
-    <div class="reveal">
-      <span class="stag">هيكل المشروع</span>
-      <h2 class="sh2">تفاصيل المشروع</h2>
-      <div class="gline"></div>
-    </div>
-    <div class="struct-grid reveal">
-      <div class="struct-card">
-        <div class="struct-card-title">💰 ماذا تدفع؟</div>
-        <div class="struct-row"><span class="struct-key">تكلفة فتح المحل</span><span class="struct-val gold">٣٠٠,٠٠٠ جنيه</span></div>
-        <div class="struct-row"><span class="struct-key">يشمل</span><span class="struct-val">بضاعة + تجهيز كامل</span></div>
-        <div class="struct-row"><span class="struct-key">تكاليف إضافية عليك</span><span class="struct-val" style="color:#4CAF50;">لا شيء</span></div>
-        <div class="struct-row"><span class="struct-key">الإيجار والمرتبات</span><span class="struct-val" style="color:#4CAF50;">على الشركة</span></div>
+      <div class="compare-strip">
+        <div class="cmp">
+          <span class="cmp-val" style="color:var(--gray);">٢٧٪</span>
+          <span class="cmp-key">شهادات البنك</span>
+        </div>
+        <div class="cmp">
+          <span class="cmp-val" style="color:var(--gray);">٢٠–٢٥٪</span>
+          <span class="cmp-key">البورصة (متقلبة)</span>
+        </div>
+        <div class="cmp highlight">
+          <span class="cmp-val">٤٠٪+</span>
+          <span class="cmp-key" style="color:var(--gold);">فرصتنا — حد أدنى</span>
+        </div>
       </div>
-      <div class="struct-card">
-        <div class="struct-card-title">📈 ماذا تحصل؟</div>
-        <div class="struct-row"><span class="struct-key">عائد سنوي (حد أدنى)</span><span class="struct-val gold">٤٠٪ = ١٢٠,٠٠٠ ج</span></div>
-        <div class="struct-row"><span class="struct-key">توزيع الأرباح</span><span class="struct-val gold">٣٠,٠٠٠ ج كل ٣ أشهر</span></div>
-        <div class="struct-row"><span class="struct-key">حصة في الشركة الأم</span><span class="struct-val gold">٠.٢٥٪</span></div>
-        <div class="struct-row"><span class="struct-key">خيار العمل كاشير</span><span class="struct-val">مرتب ثابت + أرباح</span></div>
+
+      <div class="hero-btns">
+        <a href="#apply" class="btn-p">أريد فتح محلي</a>
+        <a href="#returns" class="btn-g">كيف يعمل العائد؟</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FORM -->
-<section class="form-section" id="apply">
-  <div class="si">
-    <div class="form-wrap">
-      <div class="form-left reveal">
-        <span class="stag">سجّل اهتمامك</span>
-        <h2>خطوة واحدة
-          <span>لمعرفة تفاصيل محلك</span>
-        </h2>
+  <!-- WHY -->
+  <section style="background:var(--dark2);padding:5rem 2rem;">
+    <div class="si">
+      <div class="reveal">
+        <span class="stag">ليه هذه الفرصة مختلفة</span>
+        <h2 class="sh2">محل خاص بك — بدون تعقيدات المطعم أو الكافيه</h2>
         <div class="gline"></div>
-        <p>بعد التسجيل، هيتواصل معك الفريق خلال ٤٨ ساعة لمشاركة:</p>
-        <div class="checklist">
-          <div class="cl-item"><span class="cl-dot">✦</span>اسم الشركة وموقع المحل</div>
-          <div class="cl-item"><span class="cl-dot">✦</span>العقد والهيكل القانوني بالكامل</div>
-          <div class="cl-item"><span class="cl-dot">✦</span>الأرقام والسجل المالي الموثق</div>
-          <div class="cl-item"><span class="cl-dot">✦</span>موعد لزيارة ميدانية للمحل</div>
+      </div>
+      <div class="why-grid reveal">
+        <div class="why-item">
+          <span class="why-icon">🏭</span>
+          <div class="why-title">منتج غذائي — مش خدمة</div>
+          <div class="why-desc">المطاعم بتفشل لأن الجودة بتتذبذب والشيف بيمشي. هنا المنتج معياري ومتحكم فيه ١٠٠٪ — نفس
+            الجودة كل يوم بدون استثناء.</div>
         </div>
-        <div class="urgency">
-          ⚡ عدد الوحدات المتاحة محدود — الأولوية لمن يتواصل أولاً
+        <div class="why-item">
+          <span class="why-icon">🔒</span>
+          <div class="why-title">الشركة تتحمل الإيجار والمرتبات</div>
+          <div class="why-desc">مفيش تكاليف ثابتة عليك. الإيجار والمرتبات من طرف الشركة — أنت صاحب المحل وبتاخد الأرباح.
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">📦</span>
+          <div class="why-title">مجمدات = shelf life طويل</div>
+          <div class="why-desc">مفيش waste يومي. مفيش ضغط التخلص من البضاعة. المنتج المجمد بيعطي هامش أمان تشغيلي أعلى
+            بكتير من الطازج.</div>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">🤝</span>
+          <div class="why-title">صاحب محل — مش مدير</div>
+          <div class="why-desc">الشركة عندها فريق كامل — تسويق، مبيعات، توصيل، تغليف، إدارة مالية. دورك: تستثمر وتاخد
+            أرباحك. مش أكتر.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section style="background:var(--black);">
+    <div class="si">
+      <div class="reveal">
+        <span class="stag">ماذا يشمل المشروع</span>
+        <h2 class="sh2">بـ ٣٠٠,٠٠٠ جنيه بتفتح محل جاهز بالكامل</h2>
+        <div class="gline"></div>
+      </div>
+      <div class="get-list reveal">
+        <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>بضاعة مجمدات عالية
+              الجودة</strong> — من شركة ذات سمعة وطلب مسبق من السوق</span></div>
+        <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>برنامج مبيعات متطور</strong> —
+            تتبع كامل للمخزون والمبيعات والأرباح</span></div>
+        <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>منظومة توصيل جاهزة</strong> —
+            التوصيل للعميل من اليوم الأول</span></div>
+        <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>تعبئة وتغليف احترافي</strong>
+            — علامة تجارية معروفة وتغليف متميز</span></div>
+        <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>إدارة تسويق كاملة</strong> —
+            إعلانات، سوشيال ميديا، مجتمع عملاء نشط</span></div>
+        <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>إدارة مالية وتقارير ربع
+              سنوية</strong> — شفافية كاملة في الأرقام</span></div>
+        <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>إدارة تشغيلية كاملة</strong> —
+            فريق متخصص، SOPs موثقة، نظام ERP متكامل</span></div>
+        <div class="get-item"><span class="get-dot"></span><span class="get-text"><strong>٠.٢٥٪ في الشركة الأم</strong>
+            — حصة حقيقية في الشركة ككل، مش بس في الوحدة</span></div>
+        <div class="get-item" style="border-color:rgba(201,168,60,.3);background:rgba(201,168,60,.03);"><span
+            class="get-dot"></span><span class="get-text"><strong>اختياري:</strong> ممكن تشتغل كاشير في الفرع بمرتب ثابت
+            — بالإضافة للأرباح</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RETURNS -->
+  <section class="returns-section" id="returns">
+    <div class="si">
+      <div class="reveal">
+        <span class="stag">العائد المالي</span>
+        <h2 class="sh2">كيف يعمل عائدك؟</h2>
+        <div class="gline"></div>
+      </div>
+
+      <div class="return-big reveal">
+        <span class="return-num">٤٠٪+</span>
+        <div class="return-label">عائد سنوي على مشروعك</div>
+        <div class="return-note">حد أدنى مضمون — وممكن يزيد مع نمو الأداء</div>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <span class="tl-q">كل ٣ أشهر</span>
+          <span class="tl-val">٣٠,٠٠٠+</span>
+          <div class="tl-label">توزيع ربع سنوي (ج)</div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-q">كل سنة</span>
+          <span class="tl-val">١٢٠,٠٠٠+</span>
+          <div class="tl-label">عائد سنوي (ج)</div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-q">بعد سنتين</span>
+          <span class="tl-val">٢٤٠,٠٠٠+</span>
+          <div class="tl-label">إجمالي عائد محتمل (ج)</div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-q">بونص</span>
+          <span class="tl-val">٠.٢٥٪</span>
+          <div class="tl-label">حصة في الشركة الأم</div>
         </div>
       </div>
 
-      <div class="reveal" style="transition-delay:.15s;">
-        <div class="form-box" id="formBox">
-          <div class="form-title">طلب الانضمام</div>
-          <div class="form-sub">جميع البيانات سرية ولن تُشارك</div>
+      <div class="reveal"
+        style="margin-top:1.5rem;padding:1.2rem 1.8rem;background:rgba(201,168,60,.05);border-right:3px solid var(--gold);font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.9;">
+        <strong style="color:var(--gold);">ملاحظة:</strong>
+        الـ ٤٠٪ هو الحد الأدنى المضمون — بمعنى إن في أسوأ سيناريو بتاخد ١٢٠,٠٠٠ جنيه سنوياً على الـ ٣٠٠,٠٠٠ اللي دفعتها.
+        لو الأداء أحسن من المتوقع — نسبتك من الأرباح بتزيد.
+      </div>
+    </div>
+  </section>
 
-          <div class="fg-row">
-            <div class="fg"><label>الاسم *</label><input type="text" id="name" placeholder="اسمك"></div>
-            <div class="fg">
-              <label>رقم الهاتف *</label>
-              <div style="display:flex;gap:.4rem;">
-                <select id="code" style="width:110px;flex-shrink:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:var(--white);padding:.85rem .6rem;font-family:'Cairo',sans-serif;font-size:.82rem;border-radius:3px;outline:none;direction:ltr;transition:all .3s;">
-                  <option value="+20">🇪🇬 +20</option>
-                  <option value="+966">🇸🇦 +966</option>
-                  <option value="+971">🇦🇪 +971</option>
-                  <option value="+965">🇰🇼 +965</option>
-                  <option value="+974">🇶🇦 +974</option>
-                  <option value="+973">🇧🇭 +973</option>
-                  <option value="+968">🇴🇲 +968</option>
-                  <option value="+962">🇯🇴 +962</option>
-                  <option value="+961">🇱🇧 +961</option>
-                  <option value="+963">🇸🇾 +963</option>
-                  <option value="+964">🇮🇶 +964</option>
-                  <option value="+218">🇱🇾 +218</option>
-                  <option value="+216">🇹🇳 +216</option>
-                  <option value="+213">🇩🇿 +213</option>
-                  <option value="+212">🇲🇦 +212</option>
-                  <option value="+44">🇬🇧 +44</option>
-                  <option value="+1">🇺🇸 +1</option>
-                </select>
-                <input type="tel" id="phone" placeholder="01xxxxxxxxx" style="flex:1;">
+  <!-- VS BANK -->
+  <section class="vs-section">
+    <div class="si">
+      <div class="reveal">
+        <span class="stag">مقارنة</span>
+        <h2 class="sh2">ليه مش مشروع مع صاحبك؟</h2>
+        <div class="gline"></div>
+        <p style="color:var(--gray);font-size:.95rem;line-height:1.9;max-width:600px;margin-bottom:2rem;">
+          كتير ناس بتفكر تعمل مشروع مع صحاب — مطعم، محل، تجارة. الفكرة حلوة على الورق. بس الواقع بيقول حاجة تانية.
+        </p>
+      </div>
+      <div style="overflow-x:auto;" class="reveal">
+        <table class="vs-table">
+          <thead>
+            <tr>
+              <th>المعيار</th>
+              <th style="color:var(--gray);">مشروع مع صاحب</th>
+              <th style="color:var(--gray);">شهادة بنك</th>
+              <th style="color:var(--gold);">فرصتنا ✦</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>العائد السنوي</td>
+              <td class="vs-bank">مجهول — ممكن خسارة</td>
+              <td class="vs-bank">~٢٧٪ فيكس</td>
+              <td class="vs-ours">٤٠٪+ حد أدنى مضمون</td>
+            </tr>
+            <tr>
+              <td>من بيدير المشروع؟</td>
+              <td class="vs-bank">أنت + صاحبك + خلافات</td>
+              <td class="vs-check">البنك</td>
+              <td class="vs-ours">فريق متخصص — أنت مش محتاج حاجة</td>
+            </tr>
+            <tr>
+              <td>الإيجار والمرتبات</td>
+              <td class="vs-x">عليك أنت</td>
+              <td class="vs-check">لا يوجد</td>
+              <td class="vs-ours" style="color:#4CAF50;">على الشركة</td>
+            </tr>
+            <tr>
+              <td>الخلاف مع الشركاء</td>
+              <td class="vs-x">وارد جداً ويدمر المشروع</td>
+              <td class="vs-check">لا يوجد</td>
+              <td class="vs-ours" style="color:#4CAF50;">لا يوجد — عقد واضح</td>
+            </tr>
+            <tr>
+              <td>ضمان الاسترداد</td>
+              <td class="vs-x">مفيش ضمان</td>
+              <td class="vs-check">مضمون</td>
+              <td class="vs-ours">عائد مضمون حد أدنى</td>
+            </tr>
+            <tr>
+              <td>وقتك ومجهودك اليومي</td>
+              <td class="vs-x">مطلوب منك كل يوم</td>
+              <td class="vs-check">صفر</td>
+              <td class="vs-ours" style="color:#4CAF50;">صفر — تسليم مفتاح</td>
+            </tr>
+            <tr>
+              <td>حصة في أصل حقيقي</td>
+              <td class="vs-bank">ممكن — لو المشروع نجح</td>
+              <td class="vs-x">لا</td>
+              <td class="vs-ours">٠.٢٥٪ في الشركة الأم</td>
+            </tr>
+            <tr>
+              <td>إمكانية زيادة العائد</td>
+              <td class="vs-bank">ممكن — لو الحظ ساعد</td>
+              <td class="vs-x">لا — فيكس</td>
+              <td class="vs-ours">✓ لو الأداء زاد</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reveal"
+        style="margin-top:1.2rem;padding:1.2rem 1.8rem;background:rgba(201,168,60,.05);border-right:3px solid var(--gold);font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.9;">
+        المشكلة مش في الصاحب — المشكلة إن معظم الناس بتدخل مشاريع من غير منظومة واضحة.
+        هنا المنظومة جاهزة وشغّالة — أنت بتدخل على شيء قائم ومثبت.
+      </div>
+    </div>
+  </section>
+
+  <!-- STRUCTURE -->
+  <section class="structure-section" style="background:var(--black);">
+    <div class="si">
+      <div class="reveal">
+        <span class="stag">هيكل المشروع</span>
+        <h2 class="sh2">تفاصيل المشروع</h2>
+        <div class="gline"></div>
+      </div>
+      <div class="struct-grid reveal">
+        <div class="struct-card">
+          <div class="struct-card-title">💰 ماذا تدفع؟</div>
+          <div class="struct-row"><span class="struct-key">تكلفة فتح المحل</span><span class="struct-val gold">٣٠٠,٠٠٠
+              جنيه</span></div>
+          <div class="struct-row"><span class="struct-key">يشمل</span><span class="struct-val">بضاعة + تجهيز كامل</span>
+          </div>
+          <div class="struct-row"><span class="struct-key">تكاليف إضافية عليك</span><span class="struct-val"
+              style="color:#4CAF50;">لا شيء</span></div>
+          <div class="struct-row"><span class="struct-key">الإيجار والمرتبات</span><span class="struct-val"
+              style="color:#4CAF50;">على الشركة</span></div>
+        </div>
+        <div class="struct-card">
+          <div class="struct-card-title">📈 ماذا تحصل؟</div>
+          <div class="struct-row"><span class="struct-key">عائد سنوي (حد أدنى)</span><span class="struct-val gold">٤٠٪ =
+              ١٢٠,٠٠٠ ج</span></div>
+          <div class="struct-row"><span class="struct-key">توزيع الأرباح</span><span class="struct-val gold">٣٠,٠٠٠ ج كل
+              ٣ أشهر</span></div>
+          <div class="struct-row"><span class="struct-key">حصة في الشركة الأم</span><span
+              class="struct-val gold">٠.٢٥٪</span></div>
+          <div class="struct-row"><span class="struct-key">خيار العمل كاشير</span><span class="struct-val">مرتب ثابت +
+              أرباح</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="apply">
+    <div class="si">
+      <div class="form-wrap">
+        <div class="form-left reveal">
+          <span class="stag">سجّل اهتمامك</span>
+          <h2>خطوة واحدة
+            <span>لمعرفة تفاصيل محلك</span>
+          </h2>
+          <div class="gline"></div>
+          <p>بعد التسجيل، هيتواصل معك الفريق خلال ٤٨ ساعة لمشاركة:</p>
+          <div class="checklist">
+            <div class="cl-item"><span class="cl-dot">✦</span>اسم الشركة وموقع المحل</div>
+            <div class="cl-item"><span class="cl-dot">✦</span>العقد والهيكل القانوني بالكامل</div>
+            <div class="cl-item"><span class="cl-dot">✦</span>الأرقام والسجل المالي الموثق</div>
+            <div class="cl-item"><span class="cl-dot">✦</span>موعد لزيارة ميدانية للمحل</div>
+          </div>
+          <div class="urgency">
+            ⚡ عدد الوحدات المتاحة محدود — الأولوية لمن يتواصل أولاً
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:.15s;">
+          <div class="form-box" id="formBox">
+            <div class="form-title">طلب الانضمام</div>
+            <div class="form-sub">جميع البيانات سرية ولن تُشارك</div>
+
+            <div class="fg-row">
+              <div class="fg"><label>الاسم *</label><input type="text" id="name" placeholder="اسمك"></div>
+              <div class="fg">
+                <label>رقم الهاتف *</label>
+                <div style="display:flex;gap:.4rem;">
+                  <select id="code"
+                    style="width:110px;flex-shrink:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:var(--white);padding:.85rem .6rem;font-family:'Cairo',sans-serif;font-size:.82rem;border-radius:3px;outline:none;direction:ltr;transition:all .3s;">
+                    <option value="+20">🇪🇬 +20</option>
+                    <option value="+966">🇸🇦 +966</option>
+                    <option value="+971">🇦🇪 +971</option>
+                    <option value="+965">🇰🇼 +965</option>
+                    <option value="+974">🇶🇦 +974</option>
+                    <option value="+973">🇧🇭 +973</option>
+                    <option value="+968">🇴🇲 +968</option>
+                    <option value="+962">🇯🇴 +962</option>
+                    <option value="+961">🇱🇧 +961</option>
+                    <option value="+963">🇸🇾 +963</option>
+                    <option value="+964">🇮🇶 +964</option>
+                    <option value="+218">🇱🇾 +218</option>
+                    <option value="+216">🇹🇳 +216</option>
+                    <option value="+213">🇩🇿 +213</option>
+                    <option value="+212">🇲🇦 +212</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+1">🇺🇸 +1</option>
+                  </select>
+                  <input type="tel" id="phone" placeholder="01xxxxxxxxx" style="flex:1;">
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="fg"><label>البريد الإلكتروني</label><input type="email" id="email" placeholder="your@email.com"></div>
-
-          <div class="fg-row">
-            <div class="fg">
-              <label>المدينة</label>
-              <select id="city">
-                <option value="">اختر</option>
-                <option>القاهرة</option>
-                <option>القاهرة الجديدة</option>
-                <option>الجيزة</option>
-                <option>الإسكندرية</option>
-                <option>أخرى</option>
-              </select>
+            <div class="fg"><label>البريد الإلكتروني</label><input type="email" id="email" placeholder="your@email.com">
             </div>
-            <div class="fg">
-              <label>عدد الوحدات</label>
-              <select id="units">
-                <option value="">كم وحدة؟</option>
-                <option>وحدة واحدة (٣٠٠,٠٠٠)</option>
-                <option>وحدتان (٥٥٠,٠٠٠)</option>
-                <option>٣ وحدات فأكثر</option>
-              </select>
+
+            <div class="fg-row">
+              <div class="fg">
+                <label>المدينة</label>
+                <select id="city">
+                  <option value="">اختر</option>
+                  <option>القاهرة</option>
+                  <option>القاهرة الجديدة</option>
+                  <option>الجيزة</option>
+                  <option>الإسكندرية</option>
+                  <option>أخرى</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label>عدد الوحدات</label>
+                <select id="units">
+                  <option value="">كم وحدة؟</option>
+                  <option>وحدة واحدة (٣٠٠,٠٠٠)</option>
+                  <option>وحدتان (٥٥٠,٠٠٠)</option>
+                  <option>٣ وحدات فأكثر</option>
+                </select>
+              </div>
             </div>
+
+            <div class="fg">
+              <label>سؤال أو ملاحظة (اختياري)</label>
+              <textarea id="q" placeholder="أي سؤال مبدئي..."></textarea>
+            </div>
+
+            <button class="sub-btn" onclick="submit()" id="subBtn">أريد فتح محلي ←</button>
+            <p class="privacy">بيانات سرية ١٠٠٪ — للتواصل بخصوص هذه الفرصة فقط</p>
           </div>
 
-          <div class="fg">
-            <label>سؤال أو ملاحظة (اختياري)</label>
-            <textarea id="q" placeholder="أي سؤال مبدئي..."></textarea>
+          <div class="success" id="successBox">
+            <span class="s-icon">✦</span>
+            <h3>تم استلام طلبك</h3>
+            <p>سيتواصل معك الفريق خلال ٤٨ ساعة<br>على الرقم الذي أدخلته لمشاركة كل التفاصيل.</p>
           </div>
-
-          <button class="sub-btn" onclick="submit()" id="subBtn">أريد فتح محلي ←</button>
-          <p class="privacy">بيانات سرية ١٠٠٪ — للتواصل بخصوص هذه الفرصة فقط</p>
-        </div>
-
-        <div class="success" id="successBox">
-          <span class="s-icon">✦</span>
-          <h3>تم استلام طلبك</h3>
-          <p>سيتواصل معك الفريق خلال ٤٨ ساعة<br>على الرقم الذي أدخلته لمشاركة كل التفاصيل.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>افتح محلك الآن — جميع الأرقام موثقة وقابلة للتحقق</p>
-</footer>
+  <footer>
+    <p>افتح محلك الآن — جميع الأرقام موثقة وقابلة للتحقق</p>
+  </footer>
 
-<a href="#apply" class="fab" id="fab">افتح محلك الآن ←</a>
+  <a href="#apply" class="fab" id="fab">افتح محلك الآن ←</a>
 
-<script>
-// Reveal
-const ro = new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+  <script>
+    // Reveal
+    const ro = new IntersectionObserver(es => {es.forEach(e => {if (e.isIntersecting) {e.target.classList.add('on'); ro.unobserve(e.target);} });}, {threshold: .1, rootMargin: '0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
-// FAB
-window.addEventListener('scroll',()=>{
-  document.getElementById('fab').classList.toggle('show',window.scrollY>window.innerHeight*.4);
-});
+    // FAB
+    window.addEventListener('scroll', () => {
+      document.getElementById('fab').classList.toggle('show', window.scrollY > window.innerHeight * .4);
+    });
 
-// Submit
-function submit(){
-  const n=document.getElementById('name').value.trim();
-  const p=document.getElementById('phone').value.trim();
-  const code=document.getElementById('code').value;
-  if(!n||!p){
-    if(!n)document.getElementById('name').style.borderColor='rgba(220,60,60,.7)';
-    if(!p)document.getElementById('phone').style.borderColor='rgba(220,60,60,.7)';
-    return;
-  }
-  const btn=document.getElementById('subBtn');
-  btn.textContent='جاري الإرسال...';btn.classList.add('loading');btn.disabled=true;
-  const data={name:n,phone:code+p,city:document.getElementById('city').value,units:document.getElementById('units').value,q:document.getElementById('q').value,ts:new Date().toISOString()};
-  console.log('Lead:',data);
-  setTimeout(()=>{
-    document.getElementById('formBox').style.display='none';
-    document.getElementById('successBox').classList.add('show');
-    document.getElementById('fab').style.display='none';
-  },1500);
-}
+    // ============================================================
+    // ============================================================
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbydwxoTMQOV0Gsyr5IR0S5OYoVtG5HXh4dTG_8uYGXZt3iJztoPbnQuckLc-0DhSd8v/exec';
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    e.preventDefault();
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
-  });
-});
-</script>
+    // Submit
+    function submit() {
+      const n = document.getElementById('name').value.trim();
+      const p = document.getElementById('phone').value.trim();
+      const code = document.getElementById('code').value;
+      if (!n || !p) {
+        if (!n) document.getElementById('name').style.borderColor = 'rgba(220,60,60,.7)';
+        if (!p) document.getElementById('phone').style.borderColor = 'rgba(220,60,60,.7)';
+        return;
+      }
+      const btn = document.getElementById('subBtn');
+      btn.textContent = 'جاري الإرسال...'; btn.classList.add('loading'); btn.disabled = true;
+      const data = {name: n, phone: code + p, city: document.getElementById('city').value, units: document.getElementById('units').value, q: document.getElementById('q').value, ts: new Date().toISOString()};
+
+      fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Apps Script لا يدعم CORS العادي، الوضع ده بيبعت البيانات بنجاح من غير ما نقرا الرد
+        headers: {'Content-Type': 'text/plain'},
+        body: JSON.stringify(data)
+      }).catch(function (err) {console.error('Lead send failed:', err);});
+
+      setTimeout(() => {
+        document.getElementById('formBox').style.display = 'none';
+        document.getElementById('successBox').classList.add('show');
+        document.getElementById('fab').style.display = 'none';
+      }, 1500);
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) t.scrollIntoView({behavior: 'smooth', block: 'start'});
+      });
+    });
+  </script>
 </body>
+
 </html>
